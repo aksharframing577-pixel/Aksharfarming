@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AKSHAR FRAMING — Framing Ideas. Building Technology. We deliver cutting-edge Web Development, App Development, AI Solutions, UI/UX Design, and Performance Marketing from Surat, Gujarat.">
+  <meta name="keywords" content="AKSHAR FRAMING, web development, app development, AI solutions, UI/UX design, Google Ads, Meta Ads, Surat, Gujarat, IT company">
+  <meta name="author" content="AKSHAR FRAMING">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AKSHAR FRAMING — Framing Ideas. Building Technology.">
+  <meta property="og:description" content="We engineer your competitive edge with Web Development, App Development, AI Solutions, UI/UX Design, and Performance Marketing.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%237B61FF'/><text x='50' y='68' font-size='55' font-weight='900' fill='white' text-anchor='middle' font-family='sans-serif'>AF</text></svg>">
+
+  <title>AKSHAR FRAMING — Framing Ideas. Building Technology.</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       AKSHAR FRAMING — Custom Styles (Bootstrap 5)
+       ============================================ */
+
+    /* ---------- Design Tokens ---------- */
+    :root {
+      --af-primary:        #7B61FF;
+      --af-primary-light:  #9B85FF;
+      --af-primary-dark:   #5A3FE6;
+      --af-accent:         #00E5A0;
+      --af-accent-dark:    #00C98A;
+      --af-bg:             #0B0D17;
+      --af-bg-light:       #111322;
+      --af-surface:        #161829;
+      --af-surface-hover:  #1E2038;
+      --af-border:         rgba(255, 255, 255, 0.06);
+      --af-glass:          rgba(255, 255, 255, 0.03);
+      --af-glass-border:   rgba(255, 255, 255, 0.08);
+      --af-text:           #E4E4ED;
+      --af-text-muted:     #9A9AB0;
+      --af-text-heading:   #FFFFFF;
+      --af-gradient:       linear-gradient(135deg, var(--af-primary), var(--af-accent));
+      --af-shadow-glow:    0 0 40px rgba(123, 97, 255, 0.15);
+      --af-radius:         0.75rem;
+      --af-radius-lg:      1rem;
+      --af-transition:     300ms ease;
+    }
+
+    /* ---------- Reset & Base ---------- */
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+    ::selection { background: var(--af-primary); color: #fff; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--af-bg);
+      color: var(--af-text);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--af-text-heading);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    a { transition: color var(--af-transition); }
+
+    img { max-width: 100%; }
+
+    /* ---------- Utility: Gradient Text ---------- */
+    .text-gradient {
+      background: var(--af-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ---------- Section Label ---------- */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--af-accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 12px;
+      height: 2px;
+      background: var(--af-accent);
+      border-radius: 999px;
+    }
+
+
+    /* ============================================
+       NAVBAR
+       ============================================ */
+    .navbar {
+      background: transparent;
+      transition: all var(--af-transition);
+      padding-block: 1rem;
+    }
+
+    .navbar.scrolled {
+      background: rgba(11, 13, 23, 0.88) !important;
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--af-border);
+      padding-block: 0.6rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--af-text-heading) !important;
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-brand__icon {
+      width: 38px;
+      height: 38px;
+      background: var(--af-gradient);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.85rem;
+      color: #fff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: var(--af-text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      position: relative;
+      transition: color var(--af-transition);
+    }
+
+    .navbar-dark .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 1rem;
+      right: 1rem;
+      height: 2px;
+      background: var(--af-gradient);
+      border-radius: 999px;
+      transform: scaleX(0);
+      transition: transform var(--af-transition);
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+      color: var(--af-text-heading);
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover::after,
+    .navbar-dark .navbar-nav .nav-link.active::after {
+      transform: scaleX(1);
+    }
+
+    .navbar-toggler {
+      border: 1px solid var(--af-glass-border);
+      padding: 0.4rem 0.6rem;
+    }
+
+    .navbar-toggler:focus { box-shadow: 0 0 0 3px rgba(123, 97, 255, 0.2); }
+    .navbar-toggler-icon { filter: invert(1); }
+
+    .navbar .offcanvas {
+      background: var(--af-surface);
+      border-left: 1px solid var(--af-border);
+    }
+
+    .navbar .offcanvas .offcanvas-header { border-bottom: 1px solid var(--af-border); }
+    .navbar .offcanvas .btn-close { filter: invert(1); }
+
+
+    /* ============================================
+       BUTTONS (Custom)
+       ============================================ */
+    .btn-af-primary {
+      background: var(--af-gradient);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: var(--af-shadow-glow);
+      transition: all var(--af-transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-af-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+      opacity: 0;
+      transition: opacity var(--af-transition);
+    }
+
+    .btn-af-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 60px rgba(123, 97, 255, 0.35);
+      color: #fff;
+    }
+
+    .btn-af-primary:hover::before { opacity: 1; }
+    .btn-af-primary:active { transform: translateY(-1px); }
+
+    .btn-af-outline {
+      background: var(--af-glass);
+      color: var(--af-text);
+      border: 1.5px solid var(--af-glass-border);
+      border-radius: 999px;
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      backdrop-filter: blur(10px);
+      transition: all var(--af-transition);
+    }
+
+    .btn-af-outline:hover {
+      border-color: var(--af-primary-light);
+      color: var(--af-primary-light);
+      background: rgba(123, 97, 255, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .btn-af-lg { padding: 1rem 2.5rem; font-size: 1rem; }
+
+
+    /* ============================================
+       HERO SECTION
+       ============================================ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    /* Ambient background effects */
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(123, 97, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(0, 229, 160, 0.08) 0%, transparent 50%);
+    }
+
+    .hero__bg::after {
+      content: '';
+      position: absolute;
+      top: 15%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(123, 97, 255, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: heroFloat 8s ease-in-out infinite;
+    }
+
+    .hero__bg::before {
+      content: '';
+      position: absolute;
+      bottom: 10%;
+      left: -5%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 229, 160, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: heroFloat 10s ease-in-out infinite reverse;
+    }
+
+    /* Subtle grid pattern */
+    .hero__grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    }
+
+    .hero__content { position: relative; z-index: 2; }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--af-glass);
+      border: 1px solid var(--af-glass-border);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--af-text-muted);
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.6s ease both;
+    }
+
+    .hero__badge .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--af-accent);
+      border-radius: 50%;
+      animation: pulseDot 2s ease-in-out infinite;
+    }
+
+    .hero__title {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.6s ease 0.1s both;
+    }
+
+    .hero__subtitle {
+      font-size: 1.1rem;
+      color: var(--af-text-muted);
+      line-height: 1.8;
+      max-width: 540px;
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.6s ease 0.2s both;
+    }
+
+    .hero__actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.6s ease 0.3s both;
+    }
+
+    /* Hero visual (right side) */
+    .hero__visual {
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 0.8s ease 0.4s both;
+    }
+
+    .hero__visual-card {
+      background: var(--af-surface);
+      border: 1px solid var(--af-border);
+      border-radius: var(--af-radius-lg);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__visual-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(123, 97, 255, 0.04) 0%, transparent 60%);
+    }
+
+    .hero__code-line {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+      font-size: 0.85rem;
+      font-family: 'Courier New', monospace;
+      border-bottom: 1px solid var(--af-border);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero__code-line:last-child { border-bottom: none; }
+
+    .hero__code-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .hero__code-text { color: var(--af-text-muted); }
+    .hero__code-value { color: var(--af-accent); font-weight: 600; margin-left: auto; }
+
+    .hero__stats-row {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      animation: fadeInUp 0.6s ease 0.4s both;
+    }
+
+    .hero__stat-item { position: relative; }
+
+    .hero__stat-item + .hero__stat-item::before {
+      content: '';
+      position: absolute;
+      left: -1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 36px;
+      background: var(--af-border);
+    }
+
+    .hero__stat-number {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--af-text-heading);
+      line-height: 1;
+    }
+
+    .hero__stat-label {
+      font-size: 0.7rem;
+      color: var(--af-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 0.25rem;
+    }
+
+    /* Scroll indicator */
+    .hero__scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--af-text-muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      z-index: 2;
+      animation: fadeInUp 0.6s ease 0.6s both;
+    }
+
+    .hero__scroll-bar {
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(to bottom, var(--af-primary), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+
+    /* ============================================
+       SERVICES SECTION
+       ============================================ */
+    .services-section {
+      background: var(--af-bg-light);
+      padding-block: 6rem;
+      position: relative;
+    }
+
+    .service-card {
+      background: var(--af-surface);
+      border: 1px solid var(--af-border);
+      border-radius: var(--af-radius-lg);
+      padding: 2.25rem;
+      height: 100%;
+      transition: all var(--af-transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--af-gradient);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--af-transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(123, 97, 255, 0.2);
+      box-shadow: var(--af-shadow-glow);
+      background: var(--af-surface-hover);
+    }
+
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-card__icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(123, 97, 255, 0.1);
+      border-radius: var(--af-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--af-primary-light);
+      margin-bottom: 1.25rem;
+      transition: all var(--af-transition);
+    }
+
+    .service-card:hover .service-card__icon {
+      background: rgba(123, 97, 255, 0.18);
+      transform: scale(1.08);
+    }
+
+    .service-card__title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card__desc {
+      font-size: 0.9rem;
+      color: var(--af-text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-card__benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .service-card__benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--af-text-muted);
+    }
+
+    .service-card__benefit .bi {
+      color: var(--af-accent);
+      font-size: 0.75rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .service-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1.25rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--af-primary-light);
+      transition: all 200ms ease;
+    }
+
+    .service-card__link:hover {
+      color: var(--af-accent);
+      gap: 0.7rem;
+    }
+
+    /* Show all 6 services link */
+    .services-more {
+      margin-top: 3rem;
+    }
+
+
+    /* ============================================
+       CTA SECTION
+       ============================================ */
+    .cta-section {
+      padding-block: 6rem;
+      position: relative;
+    }
+
+    .cta-card {
+      background: var(--af-surface);
+      border: 1px solid var(--af-border);
+      border-radius: 1.5rem;
+      padding: 4.5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(123, 97, 255, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(0, 229, 160, 0.06) 0%, transparent 50%);
+    }
+
+    .cta-card__content { position: relative; z-index: 1; }
+
+    .cta-card__title {
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .cta-card__text {
+      font-size: 1.05rem;
+      color: var(--af-text-muted);
+      max-width: 520px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .cta-card__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      background: var(--af-bg-light);
+      border-top: 1px solid var(--af-border);
+      padding-top: 4.5rem;
+    }
+
+    .footer__brand-name {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--af-text-heading);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer__desc {
+      font-size: 0.85rem;
+      color: var(--af-text-muted);
+      line-height: 1.8;
+      max-width: 280px;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--af-border);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--af-text-muted);
+      font-size: 1rem;
+      transition: all 200ms ease;
+    }
+
+    .footer__social-link:hover {
+      border-color: var(--af-primary);
+      color: var(--af-primary-light);
+      background: rgba(123, 97, 255, 0.08);
+    }
+
+    .footer__title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--af-text-heading);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer__links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer__links li a,
+    .footer__links li span {
+      font-size: 0.85rem;
+      color: var(--af-text-muted);
+      transition: all 200ms ease;
+    }
+
+    .footer__links li a:hover {
+      color: var(--af-text-heading);
+      padding-left: 4px;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid var(--af-border);
+      padding: 1.25rem 0;
+      margin-top: 3rem;
+    }
+
+    .footer__copyright {
+      font-size: 0.75rem;
+      color: var(--af-text-muted);
+    }
+
+    .footer__bottom-link {
+      font-size: 0.75rem;
+      color: var(--af-text-muted);
+      transition: color 200ms ease;
+    }
+
+    .footer__bottom-link:hover { color: var(--af-text); }
+
+
+    /* ============================================
+       BACK TO TOP
+       ============================================ */
+    .back-to-top {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 44px;
+      height: 44px;
+      background: var(--af-surface);
+      border: 1px solid var(--af-border);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--af-text);
+      font-size: 1.1rem;
+      z-index: 900;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all var(--af-transition);
+      cursor: pointer;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: var(--af-primary);
+      border-color: var(--af-primary);
+      color: #fff;
+    }
+
+
+    /* ============================================
+       SCROLL REVEAL ANIMATIONS
+       ============================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger-reveal > * {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .stagger-reveal.visible > *:nth-child(1) { transition-delay: 0ms; }
+    .stagger-reveal.visible > *:nth-child(2) { transition-delay: 120ms; }
+    .stagger-reveal.visible > *:nth-child(3) { transition-delay: 240ms; }
+
+    .stagger-reveal.visible > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    /* ============================================
+       KEYFRAME ANIMATIONS
+       ============================================ */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes heroFloat {
+      0%, 100% { transform: translate(0, 0); }
+      50%      { transform: translate(20px, -20px); }
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.4; transform: scale(0.7); }
+    }
+
+    @keyframes scrollPulse {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      50%  { transform: scaleY(1); transform-origin: top; }
+      51%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to   { width: 100%; }
+    }
+
+
+    /* ============================================
+       GLOBAL OVERFLOW FIX
+       ============================================ */
+    html, body { overflow-x: hidden; max-width: 100vw; }
+
+    /* ============================================
+       RESPONSIVE — TABLET (≤992px)
+       ============================================ */
+    @media (max-width: 991.98px) {
+      .hero { min-height: auto; padding-block: 8rem 4rem; }
+      .hero__stats-row { gap: 1.5rem; }
+      .hero__visual { margin-top: 3rem; }
+      .cta-card { padding: 3rem 1.5rem; }
+      .navbar .btn-af-primary { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
+      .services-section { padding-block: 4rem; }
+    }
+
+    /* ============================================
+       RESPONSIVE — MOBILE (≤768px)
+       ============================================ */
+    @media (max-width: 767.98px) {
+      .hero { padding-block: 7rem 3rem; }
+      .hero__title { font-size: 1.85rem; line-height: 1.15; }
+      .hero__subtitle { font-size: 0.95rem; }
+      .hero__badge { font-size: 0.7rem; padding: 0.4rem 1rem; }
+      .hero__stats-row { flex-wrap: wrap; gap: 1.25rem; }
+      .hero__stat-item + .hero__stat-item::before { display: none; }
+      .hero__stat-number { font-size: 1.5rem; }
+      .hero__actions { flex-direction: column; align-items: stretch; width: 100%; }
+      .hero__actions .btn-af-primary,
+      .hero__actions .btn-af-outline { text-align: center; width: 100%; justify-content: center; }
+      .hero__scroll { display: none; }
+      .service-card { padding: 1.75rem; }
+      .service-card__icon { width: 52px; height: 52px; font-size: 1.3rem; }
+      .cta-card { padding: 2.5rem 1.25rem; }
+      .cta-card__title { font-size: 1.4rem; }
+      .cta-card__text { font-size: 0.95rem; }
+      .cta-card__actions { flex-direction: column; }
+      .cta-card__actions .btn-af-primary,
+      .cta-card__actions .btn-af-outline { width: 100%; text-align: center; justify-content: center; }
+      .footer { padding-top: 3rem; }
+      .footer__bottom .d-flex { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .section-label { font-size: 0.7rem; }
+      .navbar-brand { font-size: 1.05rem; }
+      .navbar-brand__icon { width: 32px; height: 32px; font-size: 0.75rem; }
+    }
+
+    /* ============================================
+       RESPONSIVE — EXTRA SMALL (≤480px)
+       ============================================ */
+    @media (max-width: 480px) {
+      .hero { padding-block: 6.5rem 2.5rem; }
+      .hero__title { font-size: 1.6rem; }
+      .hero__subtitle { font-size: 0.88rem; }
+      .hero__stats-row { gap: 1rem; }
+      .hero__stat-number { font-size: 1.3rem; }
+      .hero__stat-label { font-size: 0.6rem; }
+      .btn-af-primary, .btn-af-outline { padding: 0.7rem 1.5rem; font-size: 0.85rem; }
+      .btn-af-lg { padding: 0.85rem 2rem; font-size: 0.9rem; }
+      .service-card { padding: 1.5rem; }
+      .service-card__title { font-size: 1.1rem; }
+      .service-card__desc { font-size: 0.85rem; }
+      .service-card__benefit { font-size: 0.8rem; }
+      .cta-card { padding: 2rem 1rem; border-radius: 1rem; }
+      .cta-card__title { font-size: 1.25rem; }
+      .footer__brand-name { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="navbar-brand__icon">AF</span>
+        AKSHAR FRAMING
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Offcanvas Mobile Menu -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" style="color: var(--af-text-heading); font-weight: 700;">
+            <span class="navbar-brand__icon me-2" style="display:inline-flex;">AF</span>
+            AKSHAR FRAMING
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-af-primary" href="contact.html">
+                Get Free Consultation <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__grid"></div>
+    </div>
+
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- Left: Content -->
+        <div class="col-lg-7 hero__content">
+          <div class="hero__badge">
+            <span class="pulse-dot"></span>
+            Trusted Technology Partner from Surat, India
+          </div>
+
+          <h1 class="hero__title">
+            We Don't Just Build Software.<br>
+            We Engineer Your <span class="text-gradient">Competitive Edge.</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            From intelligent web platforms to AI-powered solutions, AKSHAR FRAMING transforms bold ideas into technology that drives real business growth — on time, on budget, and built to scale.
+          </p>
+
+          <div class="hero__actions">
+            <a href="contact.html" class="btn btn-af-primary btn-af-lg">
+              Start Your Project <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+            <a href="#services" class="btn btn-af-outline btn-af-lg">
+              <i class="bi bi-grid-3x3-gap me-2"></i> Explore Services
+            </a>
+          </div>
+
+          <div class="hero__stats-row">
+            <div class="hero__stat-item">
+              <div class="hero__stat-number" data-counter="50" data-suffix="+">0+</div>
+              <div class="hero__stat-label">Projects Delivered</div>
+            </div>
+            <div class="hero__stat-item">
+              <div class="hero__stat-number" data-counter="30" data-suffix="+">0+</div>
+              <div class="hero__stat-label">Happy Clients</div>
+            </div>
+            <div class="hero__stat-item">
+              <div class="hero__stat-number" data-counter="98" data-suffix="%">0%</div>
+              <div class="hero__stat-label">Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Visual Card -->
+        <div class="col-lg-5 hero__visual d-none d-lg-block">
+          <div class="hero__visual-card">
+            <div style="display:flex; gap:6px; margin-bottom:1.5rem;">
+              <span style="width:12px;height:12px;border-radius:50%;background:#ff5f57;"></span>
+              <span style="width:12px;height:12px;border-radius:50%;background:#febc2e;"></span>
+              <span style="width:12px;height:12px;border-radius:50%;background:#28c840;"></span>
+              <span style="margin-left:auto;font-size:0.7rem;color:var(--af-text-muted);font-family:monospace;">akshar.dev</span>
+            </div>
+            <div class="hero__code-line">
+              <span class="hero__code-dot" style="background: var(--af-primary);"></span>
+              <span class="hero__code-text">project.name</span>
+              <span class="hero__code-value">"Your Vision"</span>
+            </div>
+            <div class="hero__code-line">
+              <span class="hero__code-dot" style="background: var(--af-accent);"></span>
+              <span class="hero__code-text">stack.tech</span>
+              <span class="hero__code-value">"Modern"</span>
+            </div>
+            <div class="hero__code-line">
+              <span class="hero__code-dot" style="background: #febc2e;"></span>
+              <span class="hero__code-text">design.quality</span>
+              <span class="hero__code-value">"Premium"</span>
+            </div>
+            <div class="hero__code-line">
+              <span class="hero__code-dot" style="background: #ff5f57;"></span>
+              <span class="hero__code-text">delivery.speed</span>
+              <span class="hero__code-value">"On-Time"</span>
+            </div>
+            <div class="hero__code-line">
+              <span class="hero__code-dot" style="background: var(--af-primary-light);"></span>
+              <span class="hero__code-text">result</span>
+              <span class="hero__code-value">"Growth ↑"</span>
+            </div>
+            <div style="margin-top:1.25rem; padding:1rem; background: rgba(0,229,160,0.06); border: 1px solid rgba(0,229,160,0.12); border-radius:0.5rem; text-align:center;">
+              <span style="color: var(--af-accent); font-weight: 600; font-size: 0.85rem;">
+                <i class="bi bi-check-circle-fill me-1"></i> Build Successful — Ready to Deploy
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-bar"></div>
+    </div>
+  </section>
+
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 3.5rem;">
+        <span class="section-label">What We Do</span>
+        <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 0.75rem;">
+          Services Built for <span class="text-gradient">Growth</span>
+        </h2>
+        <p style="color: var(--af-text-muted); max-width: 560px; margin-inline: auto; font-size: 1rem; line-height: 1.8;">
+          End-to-end technology solutions designed to accelerate your business — from concept to launch and beyond.
+        </p>
+      </div>
+
+      <div class="row g-4 stagger-reveal">
+        <!-- Card 1: Web Development -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <div class="service-card__icon">
+              <i class="bi bi-globe2"></i>
+            </div>
+            <h3 class="service-card__title">Web Development</h3>
+            <p class="service-card__desc">Websites that work as hard as you do. Fast, responsive, and conversion-optimized — from corporate platforms to complex e-commerce.</p>
+            <div class="service-card__benefits">
+              <div class="service-card__benefit">
+                <i class="bi bi-check2-circle"></i>
+                <span>Lightning-fast load times and mobile-first design</span>
+              </div>
+              <div class="service-card__benefit">
+                <i class="bi bi-check2-circle"></i>
+                <span>SEO-optimized architecture that ranks and converts</span>
+              </div>
+              <div class="service-card__benefit">
+                <i class="bi bi-check2-circle"></i>
+                <span>Scalable codebase built with modern frameworks</span>
+              </div>
+            </div>
+            <a href="services.html" class="service-card__link">
+              Learn More <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: App Development -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <div class="service-card__icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <h3 class="service-card__title">App Development</h3>
+            <p class="service-card__desc">Your business, in every pocket. Native and cross-platform mobile apps that users love and businesses rely on.</p>
+            <div class="service-card__benefits">
+              <div class="service-card__benefit">
+                <i class="bi bi-check2-circle"></i>
+                <span>Intuitive UX that drives retention and engagement</span>
+              </div>
+              <div class="service-card__benefit">
+                <i class="bi bi-check2-circle"></i>
+                <span>Cross-platform (iOS & Android) without compromising quality</span>
+              </div>
+              <div class="service-card__benefit">
+                <i class="bi bi-check2-circle"></i>
+                <span>Robust backend for real-time data and integrations</span>
+              </div>
+            </div>
+            <a href="services.html" class="service-card__link">
+              Learn More <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: AI Solutions -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <div class="service-card__icon">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <h3 class="service-card__title">AI Solutions</h3>
+            <p class="service-card__desc">Smarter systems. Sharper decisions. Custom AI and ML solutions that automate workflows and give you an unfair advantage.</p>
+            <div class="service-card__benefits">
+              <div class="service-card__benefit">
+                <i class="bi bi-check2-circle"></i>
+                <span>Custom-trained models tailored to your industry</span>
+              </div>
+              <div class="service-card__benefit">
+                <i class="bi bi-check2-circle"></i>
+                <span>Automation that saves time and cuts costs</span>
+              </div>
+              <div class="service-card__benefit">
+                <i class="bi bi-check2-circle"></i>
+                <span>Actionable intelligence from raw data</span>
+              </div>
+            </div>
+            <a href="services.html" class="service-card__link">
+              Learn More <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- View All Services -->
+      <div class="text-center services-more reveal">
+        <a href="services.html" class="btn btn-af-outline">
+          View All 6 Services <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div class="cta-card__content">
+          <span class="section-label" style="justify-content: center;">Let's Talk</span>
+          <h2 class="cta-card__title">
+            Ready to Grow Your Business<br>with <span class="text-gradient">AKSHAR FRAMING?</span>
+          </h2>
+          <p class="cta-card__text">
+            Your competitors are already investing in technology. Let's make sure you're not just keeping up — you're leading. Start with a free, no-obligation consultation.
+          </p>
+          <div class="cta-card__actions">
+            <a href="contact.html" class="btn btn-af-primary btn-af-lg">
+              Get Your Free Consultation <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+            <a href="services.html" class="btn btn-af-outline btn-af-lg">
+              <i class="bi bi-grid-3x3-gap me-2"></i> Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <!-- Brand -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer__brand-name">
+            <span class="navbar-brand__icon" style="width:32px;height:32px;font-size:0.75rem;">AF</span>
+            AKSHAR FRAMING
+          </div>
+          <p class="footer__desc">Framing Ideas. Building Technology. Trusted by businesses across India to deliver technology that performs.</p>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer__title">Company</h5>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer__title">Services</h5>
+          <ul class="footer__links">
+            <li><a href="services.html">Web Development</a></li>
+            <li><a href="services.html">App Development</a></li>
+            <li><a href="services.html">AI Solutions</a></li>
+            <li><a href="services.html">UI/UX Design</a></li>
+            <li><a href="services.html">Google Ads</a></li>
+            <li><a href="services.html">Meta Ads</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer__title">Office</h5>
+          <ul class="footer__links">
+            <li>
+              <span><i class="bi bi-geo-alt me-2" style="color: var(--af-primary-light);"></i>730, Shakti Vijay Society</span>
+            </li>
+            <li><span style="padding-left: 1.4rem;">Nana Varachha</span></li>
+            <li><span style="padding-left: 1.4rem;">Surat, Gujarat 395006</span></li>
+            <li style="margin-top: 0.5rem;">
+              <span><i class="bi bi-envelope me-2" style="color: var(--af-primary-light);"></i>aksharframing577@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer__bottom">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <p class="footer__copyright mb-0">© 2026 AKSHAR FRAMING. All rights reserved.</p>
+          <div class="d-flex gap-3">
+            <a href="privacy.html" class="footer__bottom-link">Privacy Policy</a>
+            <a href="#" class="footer__bottom-link">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ===== Back to Top ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+
+  <!-- ===== Bootstrap 5 JS Bundle ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===== Custom JavaScript ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* --- Navbar scroll effect --- */
+      const navbar = document.getElementById('mainNav');
+      const handleScroll = () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+      };
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+
+
+      /* --- Close offcanvas on link click --- */
+      const offcanvasEl = document.getElementById('navbarOffcanvas');
+      const bsOffcanvas = offcanvasEl ? bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl) : null;
+      document.querySelectorAll('#navbarOffcanvas .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          if (bsOffcanvas && window.innerWidth < 992) bsOffcanvas.hide();
+        });
+      });
+
+
+      /* --- Active nav link on scroll --- */
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('#mainNav .nav-link');
+
+      const navObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach(link => {
+              link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            });
+          }
+        });
+      }, { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' });
+
+      sections.forEach(s => navObserver.observe(s));
+
+
+      /* --- Scroll reveal animations --- */
+      const revealEls = document.querySelectorAll('.reveal, .stagger-reveal');
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      revealEls.forEach(el => revealObserver.observe(el));
+
+
+      /* --- Counter animation --- */
+      const counters = document.querySelectorAll('[data-counter]');
+      const counterObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach(c => counterObserver.observe(c));
+
+      function animateCounter(el) {
+        const target = parseInt(el.dataset.counter);
+        const suffix = el.dataset.suffix || '';
+        const duration = 2000;
+        const start = performance.now();
+
+        function tick(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target) + suffix;
+          if (progress < 1) requestAnimationFrame(tick);
+          else el.textContent = target + suffix;
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+
+      /* --- Back to top --- */
+      const backBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        backBtn.classList.toggle('visible', window.scrollY > 400);
+      }, { passive: true });
+
+      backBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+    });
+  </script>
+
+</body>
+</html>

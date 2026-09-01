@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact AKSHAR FRAMING — Get a free project consultation. Call 9909517713 or email aksharframing577@gmail.com. Visit us at Shakti Vijay Society, Nana Varachha, Surat.">
+  <meta name="keywords" content="contact AKSHAR FRAMING, IT company Surat, web development inquiry, free consultation">
+  <meta name="author" content="AKSHAR FRAMING">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Contact Us — AKSHAR FRAMING">
+  <meta property="og:description" content="Have a project in mind? Reach out to AKSHAR FRAMING for a free consultation. We respond within 24 hours.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%237B61FF'/><text x='50' y='68' font-size='55' font-weight='900' fill='white' text-anchor='middle' font-family='sans-serif'>AF</text></svg>">
+
+  <title>Contact Us — AKSHAR FRAMING</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       DESIGN TOKENS
+       ============================================ */
+    :root {
+      --af-primary:        #7B61FF;
+      --af-primary-light:  #9B85FF;
+      --af-primary-dark:   #5A3FE6;
+      --af-accent:         #00E5A0;
+      --af-accent-dark:    #00C98A;
+      --af-bg:             #0B0D17;
+      --af-bg-light:       #111322;
+      --af-surface:        #161829;
+      --af-surface-hover:  #1E2038;
+      --af-border:         rgba(255, 255, 255, 0.06);
+      --af-glass:          rgba(255, 255, 255, 0.03);
+      --af-glass-border:   rgba(255, 255, 255, 0.08);
+      --af-text:           #E4E4ED;
+      --af-text-muted:     #9A9AB0;
+      --af-text-heading:   #FFFFFF;
+      --af-gradient:       linear-gradient(135deg, var(--af-primary), var(--af-accent));
+      --af-shadow-glow:    0 0 40px rgba(123, 97, 255, 0.15);
+      --af-radius:         0.75rem;
+      --af-radius-lg:      1rem;
+      --af-transition:     300ms ease;
+      --af-error:          #FF4D6A;
+      --af-success:        #00E5A0;
+    }
+
+    /* ============================================
+       BASE
+       ============================================ */
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    ::selection { background: var(--af-primary); color: #fff; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--af-bg);
+      color: var(--af-text);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--af-text-heading);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    a { transition: color var(--af-transition); }
+
+    .text-gradient {
+      background: var(--af-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--af-accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 12px;
+      height: 2px;
+      background: var(--af-accent);
+      border-radius: 999px;
+    }
+
+
+    /* ============================================
+       NAVBAR
+       ============================================ */
+    .navbar {
+      background: transparent;
+      transition: all var(--af-transition);
+      padding-block: 1rem;
+    }
+
+    .navbar.scrolled {
+      background: rgba(11, 13, 23, 0.88) !important;
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--af-border);
+      padding-block: 0.6rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--af-text-heading) !important;
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-brand__icon {
+      width: 38px;
+      height: 38px;
+      background: var(--af-gradient);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.85rem;
+      color: #fff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: var(--af-text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      position: relative;
+      transition: color var(--af-transition);
+    }
+
+    .navbar-dark .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 1rem;
+      right: 1rem;
+      height: 2px;
+      background: var(--af-gradient);
+      border-radius: 999px;
+      transform: scaleX(0);
+      transition: transform var(--af-transition);
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active { color: var(--af-text-heading); }
+
+    .navbar-dark .navbar-nav .nav-link:hover::after,
+    .navbar-dark .navbar-nav .nav-link.active::after { transform: scaleX(1); }
+
+    .navbar-toggler { border: 1px solid var(--af-glass-border); padding: 0.4rem 0.6rem; }
+    .navbar-toggler:focus { box-shadow: 0 0 0 3px rgba(123, 97, 255, 0.2); }
+    .navbar-toggler-icon { filter: invert(1); }
+
+    .navbar .offcanvas { background: var(--af-surface); border-left: 1px solid var(--af-border); }
+    .navbar .offcanvas .offcanvas-header { border-bottom: 1px solid var(--af-border); }
+    .navbar .offcanvas .btn-close { filter: invert(1); }
+
+
+    /* ============================================
+       BUTTONS
+       ============================================ */
+    .btn-af-primary {
+      background: var(--af-gradient);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: var(--af-shadow-glow);
+      transition: all var(--af-transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-af-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+      opacity: 0;
+      transition: opacity var(--af-transition);
+    }
+
+    .btn-af-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 60px rgba(123, 97, 255, 0.35);
+      color: #fff;
+    }
+
+    .btn-af-primary:hover::before { opacity: 1; }
+    .btn-af-primary:active { transform: translateY(-1px); }
+
+    .btn-af-outline {
+      background: var(--af-glass);
+      color: var(--af-text);
+      border: 1.5px solid var(--af-glass-border);
+      border-radius: 999px;
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      backdrop-filter: blur(10px);
+      transition: all var(--af-transition);
+    }
+
+    .btn-af-outline:hover {
+      border-color: var(--af-primary-light);
+      color: var(--af-primary-light);
+      background: rgba(123, 97, 255, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .btn-af-lg { padding: 1rem 2.5rem; font-size: 1rem; }
+
+
+    /* ============================================
+       PAGE HEADER
+       ============================================ */
+    .page-header {
+      padding-top: 10rem;
+      padding-bottom: 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(123, 97, 255, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(0, 229, 160, 0.06) 0%, transparent 50%);
+      z-index: 0;
+    }
+
+    .page-header__grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+    }
+
+    .page-header__content { position: relative; z-index: 1; }
+
+    .page-header__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--af-text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .page-header__breadcrumb a { color: var(--af-text-muted); }
+    .page-header__breadcrumb a:hover { color: var(--af-primary-light); }
+    .page-header__breadcrumb .sep { opacity: 0.4; }
+
+    .page-header__title {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      animation: fadeInUp 0.6s ease both;
+    }
+
+    .page-header__desc {
+      font-size: 1.1rem;
+      color: var(--af-text-muted);
+      max-width: 600px;
+      line-height: 1.8;
+      animation: fadeInUp 0.6s ease 0.1s both;
+    }
+
+
+    /* ============================================
+       CONTACT INFO CARDS
+       ============================================ */
+    .contact-section {
+      padding-block: 6rem;
+    }
+
+    .info-card {
+      background: var(--af-surface);
+      border: 1px solid var(--af-border);
+      border-radius: var(--af-radius-lg);
+      padding: 2rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--af-border);
+      transition: all var(--af-transition);
+    }
+
+    .info-item:last-child { border-bottom: none; }
+
+    .info-item:hover { padding-left: 0.3rem; }
+
+    .info-item__icon {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      background: rgba(123, 97, 255, 0.1);
+      border-radius: var(--af-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--af-primary-light);
+      transition: all var(--af-transition);
+    }
+
+    .info-item:hover .info-item__icon {
+      background: rgba(123, 97, 255, 0.18);
+      transform: scale(1.05);
+    }
+
+    .info-item__label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--af-text-muted);
+      margin-bottom: 2px;
+    }
+
+    .info-item__value {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--af-text-heading);
+      line-height: 1.5;
+    }
+
+    .info-item__value a {
+      color: var(--af-text-heading);
+    }
+
+    .info-item__value a:hover {
+      color: var(--af-primary-light);
+    }
+
+    /* Quick action cards */
+    .quick-card {
+      background: var(--af-surface);
+      border: 1px solid var(--af-border);
+      border-radius: var(--af-radius-lg);
+      padding: 1.5rem;
+      transition: all var(--af-transition);
+      cursor: default;
+    }
+
+    .quick-card:hover {
+      border-color: rgba(123, 97, 255, 0.15);
+      transform: translateY(-3px);
+      box-shadow: var(--af-shadow-glow);
+    }
+
+    .quick-card__icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .quick-card__title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .quick-card__desc {
+      font-size: 0.8rem;
+      color: var(--af-text-muted);
+      line-height: 1.5;
+    }
+
+
+    /* ============================================
+       CONTACT FORM
+       ============================================ */
+    .form-card {
+      background: var(--af-surface);
+      border: 1px solid var(--af-border);
+      border-radius: var(--af-radius-lg);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--af-gradient);
+    }
+
+    .form-card__title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .form-card__subtitle {
+      font-size: 0.88rem;
+      color: var(--af-text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--af-text);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group label .required {
+      color: var(--af-error);
+      margin-left: 2px;
+    }
+
+    .form-control-af {
+      width: 100%;
+      background: var(--af-bg);
+      border: 1.5px solid var(--af-border);
+      border-radius: var(--af-radius);
+      padding: 0.875rem 1rem;
+      color: var(--af-text);
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: all var(--af-transition);
+    }
+
+    .form-control-af::placeholder {
+      color: var(--af-text-muted);
+      opacity: 0.5;
+    }
+
+    .form-control-af:focus {
+      border-color: var(--af-primary);
+      box-shadow: 0 0 0 3px rgba(123, 97, 255, 0.12);
+      background: var(--af-bg-light);
+    }
+
+    .form-control-af.error {
+      border-color: var(--af-error);
+      box-shadow: 0 0 0 3px rgba(255, 77, 106, 0.1);
+    }
+
+    .form-control-af.success {
+      border-color: var(--af-success);
+      box-shadow: 0 0 0 3px rgba(0, 229, 160, 0.08);
+    }
+
+    textarea.form-control-af {
+      resize: vertical;
+      min-height: 140px;
+    }
+
+    select.form-control-af {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239A9AB0' viewBox='0 0 16 16'%3E%3Cpath d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
+
+    select.form-control-af option {
+      background: var(--af-surface);
+      color: var(--af-text);
+    }
+
+    /* Error message */
+    .field-error {
+      font-size: 0.75rem;
+      color: var(--af-error);
+      margin-top: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: all 200ms ease;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .field-error.show {
+      opacity: 1;
+      transform: translateY(0);
+      height: auto;
+      margin-top: 0.35rem;
+    }
+
+    /* Success message */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .form-success.show {
+      display: block;
+      animation: fadeInUp 0.5s ease both;
+    }
+
+    .form-success__icon {
+      width: 72px;
+      height: 72px;
+      background: rgba(0, 229, 160, 0.1);
+      border: 2px solid rgba(0, 229, 160, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--af-accent);
+      margin: 0 auto 1.25rem;
+      animation: successPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+    }
+
+    .form-success__title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-success__text {
+      font-size: 0.9rem;
+      color: var(--af-text-muted);
+      line-height: 1.7;
+      max-width: 380px;
+      margin-inline: auto;
+    }
+
+    /* Submit button full-width */
+    .btn-submit {
+      width: 100%;
+      background: var(--af-gradient);
+      color: #fff;
+      border: none;
+      border-radius: var(--af-radius);
+      padding: 1rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--af-transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-submit::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent);
+      opacity: 0;
+      transition: opacity var(--af-transition);
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px rgba(123, 97, 255, 0.3);
+    }
+
+    .btn-submit:hover::before { opacity: 1; }
+    .btn-submit:active { transform: translateY(0); }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    .btn-submit .spinner {
+      display: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin-right: 0.5rem;
+    }
+
+    .btn-submit.loading .spinner { display: inline-block; }
+    .btn-submit.loading .btn-text { opacity: 0.7; }
+
+
+    /* ============================================
+       MAP SECTION
+       ============================================ */
+    .map-section {
+      padding-block: 6rem;
+      background: var(--af-bg-light);
+    }
+
+    .map-wrapper {
+      border-radius: var(--af-radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--af-border);
+    }
+
+    .map-wrapper iframe {
+      display: block;
+      filter: invert(0.9) hue-rotate(180deg) saturate(0.6) brightness(0.7);
+    }
+
+
+    /* ============================================
+       CTA
+       ============================================ */
+    .cta-section {
+      padding-block: 6rem;
+    }
+
+    .cta-card {
+      background: var(--af-surface);
+      border: 1px solid var(--af-border);
+      border-radius: 1.5rem;
+      padding: 4.5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(123, 97, 255, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(0, 229, 160, 0.06) 0%, transparent 50%);
+    }
+
+    .cta-card__content { position: relative; z-index: 1; }
+
+    .cta-card__title {
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .cta-card__text {
+      font-size: 1.05rem;
+      color: var(--af-text-muted);
+      max-width: 520px;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .cta-card__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      background: var(--af-bg-light);
+      border-top: 1px solid var(--af-border);
+      padding-top: 4.5rem;
+    }
+
+    .footer__brand-name {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--af-text-heading);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer__desc {
+      font-size: 0.85rem;
+      color: var(--af-text-muted);
+      line-height: 1.8;
+      max-width: 280px;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer__social { display: flex; gap: 0.5rem; }
+
+    .footer__social-link {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--af-border);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--af-text-muted);
+      font-size: 1rem;
+      transition: all 200ms ease;
+    }
+
+    .footer__social-link:hover {
+      border-color: var(--af-primary);
+      color: var(--af-primary-light);
+      background: rgba(123, 97, 255, 0.08);
+    }
+
+    .footer__title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--af-text-heading);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer__links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .footer__links li a,
+    .footer__links li span {
+      font-size: 0.85rem;
+      color: var(--af-text-muted);
+      transition: all 200ms ease;
+    }
+
+    .footer__links li a:hover { color: var(--af-text-heading); padding-left: 4px; }
+
+    .footer__bottom {
+      border-top: 1px solid var(--af-border);
+      padding: 1.25rem 0;
+      margin-top: 3rem;
+    }
+
+    .footer__copyright { font-size: 0.75rem; color: var(--af-text-muted); }
+    .footer__bottom-link { font-size: 0.75rem; color: var(--af-text-muted); transition: color 200ms ease; }
+    .footer__bottom-link:hover { color: var(--af-text); }
+
+
+    /* ============================================
+       BACK TO TOP
+       ============================================ */
+    .back-to-top {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 44px;
+      height: 44px;
+      background: var(--af-surface);
+      border: 1px solid var(--af-border);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--af-text);
+      font-size: 1.1rem;
+      z-index: 900;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all var(--af-transition);
+      cursor: pointer;
+    }
+
+    .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-to-top:hover { background: var(--af-primary); border-color: var(--af-primary); color: #fff; }
+
+
+    /* ============================================
+       SCROLL REVEAL
+       ============================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+
+    /* ============================================
+       KEYFRAMES
+       ============================================ */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes successPop {
+      from { opacity: 0; transform: scale(0.5); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+
+    /* ============================================
+       GLOBAL OVERFLOW FIX
+       ============================================ */
+    html, body { overflow-x: hidden; max-width: 100vw; }
+
+    /* ============================================
+       RESPONSIVE — TABLET (≤992px)
+       ============================================ */
+    @media (max-width: 991.98px) {
+      .page-header { padding-top: 8rem; padding-bottom: 3.5rem; }
+      .cta-card { padding: 3rem 1.5rem; }
+      .form-card { padding: 2rem; }
+      .navbar .btn-af-primary { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
+      .contact-section { padding-block: 4rem; }
+      .map-section { padding-block: 4rem; }
+    }
+
+    /* ============================================
+       RESPONSIVE — MOBILE (≤768px)
+       ============================================ */
+    @media (max-width: 767.98px) {
+      .page-header { padding-top: 7rem; padding-bottom: 3rem; }
+      .page-header__title { font-size: 1.85rem; }
+      .page-header__desc { font-size: 0.95rem; }
+      .form-row-2 { grid-template-columns: 1fr !important; }
+      .form-card { padding: 1.75rem; }
+      .form-card__title { font-size: 1.15rem; }
+      .form-control-af { padding: 0.8rem 0.9rem; font-size: 0.88rem; }
+      .btn-submit { padding: 0.9rem; font-size: 0.9rem; }
+      .info-card { padding: 1.5rem; }
+      .info-item__icon { width: 44px; height: 44px; min-width: 44px; font-size: 1.1rem; }
+      .info-item__value { font-size: 0.88rem; }
+      .quick-card { padding: 1.25rem; }
+      .quick-card__title { font-size: 0.88rem; }
+      .quick-card__desc { font-size: 0.75rem; }
+      .map-wrapper iframe { height: 280px; }
+      .cta-card { padding: 2.5rem 1.25rem; }
+      .cta-card__title { font-size: 1.4rem; }
+      .cta-card__actions { flex-direction: column; }
+      .cta-card__actions .btn-af-primary,
+      .cta-card__actions .btn-af-outline { width: 100%; text-align: center; justify-content: center; }
+      .footer { padding-top: 3rem; }
+      .footer__bottom .d-flex { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .section-label { font-size: 0.7rem; }
+      .navbar-brand { font-size: 1.05rem; }
+      .navbar-brand__icon { width: 32px; height: 32px; font-size: 0.75rem; }
+    }
+
+    /* ============================================
+       RESPONSIVE — EXTRA SMALL (≤480px)
+       ============================================ */
+    @media (max-width: 480px) {
+      .page-header { padding-top: 6.5rem; padding-bottom: 2.5rem; }
+      .page-header__title { font-size: 1.6rem; }
+      .form-card { padding: 1.25rem; }
+      .form-card__title { font-size: 1.05rem; }
+      .form-card__subtitle { font-size: 0.8rem; }
+      .form-control-af { padding: 0.75rem 0.85rem; font-size: 0.85rem; }
+      .info-item { padding: 1rem 0; gap: 0.75rem; }
+      .info-item__icon { width: 40px; height: 40px; min-width: 40px; font-size: 1rem; }
+      .map-wrapper iframe { height: 220px; }
+      .btn-af-primary, .btn-af-outline { padding: 0.7rem 1.5rem; font-size: 0.85rem; }
+      .btn-af-lg { padding: 0.85rem 2rem; font-size: 0.9rem; }
+      .cta-card { padding: 2rem 1rem; border-radius: 1rem; }
+      .cta-card__title { font-size: 1.25rem; }
+      .footer__brand-name { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="navbar-brand__icon">AF</span>
+        AKSHAR FRAMING
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" style="color: var(--af-text-heading); font-weight: 700;">
+            <span class="navbar-brand__icon me-2" style="display:inline-flex;">AF</span> AKSHAR FRAMING
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-af-primary" href="contact.html">Get Free Consultation <i class="bi bi-arrow-right ms-1"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <div class="page-header__bg"><div class="page-header__grid"></div></div>
+    <div class="container page-header__content">
+      <div class="page-header__breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Contact</span>
+      </div>
+      <h1 class="page-header__title">
+        Let's Build Something <span class="text-gradient">Extraordinary</span>
+      </h1>
+      <p class="page-header__desc">
+        Have a project in mind? Reach out today — no pressure, no jargon, just a straightforward conversation about how we can help your business grow.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+
+        <!-- LEFT: Info + Quick Cards -->
+        <div class="col-lg-5 reveal-left">
+
+          <!-- Contact Info Card -->
+          <div class="info-card" style="margin-bottom: 1.25rem;">
+            <div class="info-item">
+              <div class="info-item__icon"><i class="bi bi-geo-alt"></i></div>
+              <div>
+                <div class="info-item__label">Visit Us</div>
+                <div class="info-item__value">730, Shakti Vijay Society,<br>Nana Varachha,<br>Surat, Gujarat 395006</div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-item__icon"><i class="bi bi-telephone"></i></div>
+              <div>
+                <div class="info-item__label">Call Us</div>
+                <div class="info-item__value"><a href="tel:+919909517713">+91 99095 17713</a></div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-item__icon"><i class="bi bi-envelope"></i></div>
+              <div>
+                <div class="info-item__label">Email Us</div>
+                <div class="info-item__value"><a href="mailto:aksharframing577@gmail.com">aksharframing577@gmail.com</a></div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-item__icon"><i class="bi bi-clock"></i></div>
+              <div>
+                <div class="info-item__label">Working Hours</div>
+                <div class="info-item__value">Mon – Sat: 10:00 AM – 7:00 PM</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Cards -->
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="quick-card">
+                <div class="quick-card__icon">🚀</div>
+                <h4 class="quick-card__title">Quick Start</h4>
+                <p class="quick-card__desc">Fill the form, get a free assessment within 24 hours.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="quick-card">
+                <div class="quick-card__icon">📞</div>
+                <h4 class="quick-card__title">Prefer a Call?</h4>
+                <p class="quick-card__desc">Book a free 30-min strategy session with our team.</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- RIGHT: Contact Form -->
+        <div class="col-lg-7 reveal-right">
+          <div class="form-card">
+            <h3 class="form-card__title">Send Us a Message</h3>
+            <p class="form-card__subtitle">Tell us about your project — we'll get back within 24 hours, guaranteed.</p>
+
+            <!-- The Form -->
+            <form id="contactForm" action="https://formspree.io/f/mqpkppjv" method="POST" novalidate>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="form-row-2">
+                <div class="form-group">
+                  <label for="name">Full Name <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" class="form-control-af" placeholder="Your full name" autocomplete="name">
+                  <div class="field-error" id="nameError"><i class="bi bi-exclamation-circle"></i> <span></span></div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" class="form-control-af" placeholder="you@example.com" autocomplete="email">
+                  <div class="field-error" id="emailError"><i class="bi bi-exclamation-circle"></i> <span></span></div>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="form-row-2">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-control-af" placeholder="+91 00000 00000" autocomplete="tel">
+                  <div class="field-error" id="phoneError"><i class="bi bi-exclamation-circle"></i> <span></span></div>
+                </div>
+                <div class="form-group">
+                  <label for="service">Service Interested In <span class="required">*</span></label>
+                  <select id="service" name="service" class="form-control-af">
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="app-development">App Development</option>
+                    <option value="ai-solutions">AI Solutions</option>
+                    <option value="ui-ux-design">UI/UX Design</option>
+                    <option value="google-ads">Google Ads Marketing</option>
+                    <option value="meta-ads">Meta Ads & Social Media</option>
+                    <option value="multiple">Multiple Services</option>
+                    <option value="not-sure">Not Sure Yet</option>
+                  </select>
+                  <div class="field-error" id="serviceError"><i class="bi bi-exclamation-circle"></i> <span></span></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message <span class="required">*</span></label>
+                <textarea id="message" name="message" class="form-control-af" placeholder="Tell us about your project, goals, and timeline..."></textarea>
+                <div class="field-error" id="messageError"><i class="bi bi-exclamation-circle"></i> <span></span></div>
+              </div>
+
+              <button type="submit" class="btn-submit" id="submitBtn">
+                <span class="spinner"></span>
+                <span class="btn-text">Send Message <i class="bi bi-arrow-right ms-1"></i></span>
+              </button>
+
+              <p style="font-size: 0.75rem; color: var(--af-text-muted); margin-top: 0.75rem; text-align: center;">
+                <i class="bi bi-shield-check me-1" style="color: var(--af-accent);"></i>
+                Your information is secure and will never be shared with third parties.
+              </p>
+            </form>
+
+            <!-- Success State -->
+            <div class="form-success" id="formSuccess">
+              <div class="form-success__icon"><i class="bi bi-check-lg"></i></div>
+              <h3 class="form-success__title">Message Sent Successfully!</h3>
+              <p class="form-success__text">
+                Thank you for reaching out. Our team at AKSHAR FRAMING will review your message and get back to you within 24 hours.
+              </p>
+              <button onclick="resetForm()" class="btn btn-af-outline" style="margin-top: 1.5rem;">
+                <i class="bi bi-arrow-repeat me-2"></i> Send Another Message
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== MAP ===== -->
+  <section class="map-section">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 2.5rem;">
+        <span class="section-label">Find Us</span>
+        <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.5rem;">
+          Our <span class="text-gradient">Location</span>
+        </h2>
+        <p style="color: var(--af-text-muted); font-size: 0.95rem;">
+          730, Shakti Vijay Society, Nana Varachha, Surat, Gujarat 395006
+        </p>
+      </div>
+      <div class="map-wrapper reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.0!2d72.86!3d21.22!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDEzJzEyLjAiTiA3MsKwNTEnMzYuMCJF!5e0!3m2!1sen!2sin!4v1"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="AKSHAR FRAMING Office — Nana Varachha, Surat">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div class="cta-card__content">
+          <span class="section-label" style="justify-content: center;">Let's Talk</span>
+          <h2 class="cta-card__title">
+            Let's Build Something <span class="text-gradient">Amazing Together</span>
+          </h2>
+          <p class="cta-card__text">
+            Your competitors are already investing in technology. Let's make sure you're not just keeping up — you're leading.
+          </p>
+          <div class="cta-card__actions">
+            <a href="tel:+919909517713" class="btn btn-af-primary btn-af-lg">
+              <i class="bi bi-telephone me-2"></i> Call Now: +91 99095 17713
+            </a>
+            <a href="services.html" class="btn btn-af-outline btn-af-lg">
+              <i class="bi bi-grid-3x3-gap me-2"></i> Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer__brand-name">
+            <span class="navbar-brand__icon" style="width:32px;height:32px;font-size:0.75rem;">AF</span>
+            AKSHAR FRAMING
+          </div>
+          <p class="footer__desc">Framing Ideas. Building Technology. Trusted by businesses across India to deliver technology that performs.</p>
+
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer__title">Company</h5>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer__title">Services</h5>
+          <ul class="footer__links">
+            <li><a href="services.html">Web Development</a></li>
+            <li><a href="services.html">App Development</a></li>
+            <li><a href="services.html">AI Solutions</a></li>
+            <li><a href="services.html">UI/UX Design</a></li>
+            <li><a href="services.html">Google Ads</a></li>
+            <li><a href="services.html">Meta Ads</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer__title">Office</h5>
+          <ul class="footer__links">
+            <li><span><i class="bi bi-geo-alt me-2" style="color: var(--af-primary-light);"></i>730, Shakti Vijay Society</span></li>
+            <li><span style="padding-left: 1.4rem;">Nana Varachha</span></li>
+            <li><span style="padding-left: 1.4rem;">Surat, Gujarat 395006</span></li>
+            <li style="margin-top: 0.5rem;"><span><i class="bi bi-telephone me-2" style="color: var(--af-primary-light);"></i>+91 99095 17713</span></li>
+            <li><span><i class="bi bi-envelope me-2" style="color: var(--af-primary-light);"></i>aksharframing577@gmail.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <p class="footer__copyright mb-0">© 2026 AKSHAR FRAMING. All rights reserved.</p>
+          <div class="d-flex gap-3">
+            <a href="privacy.html" class="footer__bottom-link">Privacy Policy</a>
+            <a href="#" class="footer__bottom-link">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-chevron-up"></i></button>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===== JavaScript: Validation + UI ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* ===== Navbar Scroll ===== */
+      const navbar = document.getElementById('mainNav');
+      const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 60);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      /* ===== Offcanvas Close ===== */
+      const oc = document.getElementById('navbarOffcanvas');
+      const bsOC = oc ? bootstrap.Offcanvas.getOrCreateInstance(oc) : null;
+      document.querySelectorAll('#navbarOffcanvas .nav-link').forEach(l => {
+        l.addEventListener('click', () => { if (bsOC && window.innerWidth < 992) bsOC.hide(); });
+      });
+
+      /* ===== Scroll Reveal ===== */
+      const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => obs.observe(el));
+
+      /* ===== Back to Top ===== */
+      const btn = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400), { passive: true });
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+
+      /* ==========================================================
+         FORM VALIDATION
+         ========================================================== */
+
+      const form       = document.getElementById('contactForm');
+      const submitBtn  = document.getElementById('submitBtn');
+      const successDiv = document.getElementById('formSuccess');
+
+      // Field references
+      const fields = {
+        name:    document.getElementById('name'),
+        email:   document.getElementById('email'),
+        phone:   document.getElementById('phone'),
+        service: document.getElementById('service'),
+        message: document.getElementById('message'),
+      };
+
+      // Error message references
+      const errors = {
+        name:    document.getElementById('nameError'),
+        email:   document.getElementById('emailError'),
+        phone:   document.getElementById('phoneError'),
+        service: document.getElementById('serviceError'),
+        message: document.getElementById('messageError'),
+      };
+
+      // Email regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Phone regex (optional, but if entered must be valid)
+      const phoneRegex = /^[\+]?[\d\s\-()]{7,15}$/;
+
+
+      /**
+       * Show error on a field
+       */
+      function showError(fieldName, message) {
+        const field = fields[fieldName];
+        const error = errors[fieldName];
+
+        field.classList.add('error');
+        field.classList.remove('success');
+
+        error.querySelector('span').textContent = message;
+        error.classList.add('show');
+      }
+
+      /**
+       * Clear error on a field
+       */
+      function clearError(fieldName) {
+        const field = fields[fieldName];
+        const error = errors[fieldName];
+
+        field.classList.remove('error');
+        error.classList.remove('show');
+      }
+
+      /**
+       * Mark field as valid
+       */
+      function markValid(fieldName) {
+        const field = fields[fieldName];
+        field.classList.remove('error');
+        field.classList.add('success');
+        clearError(fieldName);
+      }
+
+      /**
+       * Validate a single field
+       * Returns true if valid
+       */
+      function validateField(fieldName) {
+        const value = fields[fieldName].value.trim();
+
+        switch (fieldName) {
+          case 'name':
+            if (!value) {
+              showError('name', 'Please enter your full name');
+              return false;
+            }
+            if (value.length < 2) {
+              showError('name', 'Name must be at least 2 characters');
+              return false;
+            }
+            markValid('name');
+            return true;
+
+          case 'email':
+            if (!value) {
+              showError('email', 'Please enter your email address');
+              return false;
+            }
+            if (!emailRegex.test(value)) {
+              showError('email', 'Please enter a valid email address');
+              return false;
+            }
+            markValid('email');
+            return true;
+
+          case 'phone':
+            // Phone is optional, but validate format if entered
+            if (value && !phoneRegex.test(value)) {
+              showError('phone', 'Please enter a valid phone number');
+              return false;
+            }
+            if (value) markValid('phone');
+            else clearError('phone');
+            return true;
+
+          case 'service':
+            if (!value) {
+              showError('service', 'Please select a service');
+              return false;
+            }
+            markValid('service');
+            return true;
+
+          case 'message':
+            if (!value) {
+              showError('message', 'Please enter your message');
+              return false;
+            }
+            if (value.length < 10) {
+              showError('message', 'Message must be at least 10 characters');
+              return false;
+            }
+            markValid('message');
+            return true;
+
+          default:
+            return true;
+        }
+      }
+
+
+      /**
+       * Real-time validation: clear errors on input
+       */
+      Object.keys(fields).forEach(fieldName => {
+        const field = fields[fieldName];
+        const eventType = field.tagName === 'SELECT' ? 'change' : 'input';
+
+        field.addEventListener(eventType, () => {
+          // Only validate if the field was previously in error
+          if (field.classList.contains('error')) {
+            validateField(fieldName);
+          }
+        });
+
+        // Validate on blur (when user leaves a field)
+        field.addEventListener('blur', () => {
+          const value = field.value.trim();
+          // Only validate on blur if user has typed something or the field is required
+          if (value || fieldName === 'name' || fieldName === 'email' || fieldName === 'service' || fieldName === 'message') {
+            if (value) validateField(fieldName);
+          }
+        });
+      });
+
+
+      /**
+       * Form submission handler
+       */
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Validate all required fields
+        const nameValid    = validateField('name');
+        const emailValid   = validateField('email');
+        const phoneValid   = validateField('phone');
+        const serviceValid = validateField('service');
+        const messageValid = validateField('message');
+
+        const allValid = nameValid && emailValid && phoneValid && serviceValid && messageValid;
+
+        if (!allValid) {
+          // Shake the submit button to indicate error
+          submitBtn.style.animation = 'shake 0.4s ease';
+          setTimeout(() => { submitBtn.style.animation = ''; }, 500);
+
+          // Focus the first invalid field
+          const firstError = Object.keys(fields).find(f => fields[f].classList.contains('error'));
+          if (firstError) fields[firstError].focus();
+
+          return;
+        }
+
+        // All valid — submit to Formspree
+        submitBtn.classList.add('loading');
+        submitBtn.disabled = true;
+
+        const formData = new FormData(form);
+
+        fetch('https://formspree.io/f/mqpkppjv', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+          submitBtn.classList.remove('loading');
+          submitBtn.disabled = false;
+
+          if (response.ok) {
+            // Success — hide form, show success message
+            form.style.display = 'none';
+            successDiv.classList.add('show');
+          } else {
+            return response.json().then(data => {
+              const errorMsg = (data.errors && data.errors.map(e => e.message).join(', ')) || 'Something went wrong. Please try again.';
+              alert(errorMsg);
+            });
+          }
+        })
+        .catch(() => {
+          submitBtn.classList.remove('loading');
+          submitBtn.disabled = false;
+          alert('Network error. Please check your connection and try again.');
+        });
+      });
+
+
+      /**
+       * Reset form to initial state
+       */
+      window.resetForm = function() {
+        form.reset();
+
+        // Clear all field states
+        Object.keys(fields).forEach(f => {
+          fields[f].classList.remove('error', 'success');
+          clearError(f);
+        });
+
+        // Show form, hide success
+        form.style.display = '';
+        successDiv.classList.remove('show');
+
+        // Focus first field
+        fields.name.focus();
+      };
+
+    });
+  </script>
+
+</body>
+</html>

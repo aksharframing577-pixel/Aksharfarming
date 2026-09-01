@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy — AKSHAR FRAMING. Learn how we collect, use, and protect your personal information when you visit our website or use our services.">
+  <meta name="author" content="AKSHAR FRAMING">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%237B61FF'/><text x='50' y='68' font-size='55' font-weight='900' fill='white' text-anchor='middle' font-family='sans-serif'>AF</text></svg>">
+
+  <title>Privacy Policy — AKSHAR FRAMING</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --af-primary:        #7B61FF;
+      --af-primary-light:  #9B85FF;
+      --af-primary-dark:   #5A3FE6;
+      --af-accent:         #00E5A0;
+      --af-accent-dark:    #00C98A;
+      --af-bg:             #0B0D17;
+      --af-bg-light:       #111322;
+      --af-surface:        #161829;
+      --af-surface-hover:  #1E2038;
+      --af-border:         rgba(255, 255, 255, 0.06);
+      --af-glass:          rgba(255, 255, 255, 0.03);
+      --af-glass-border:   rgba(255, 255, 255, 0.08);
+      --af-text:           #E4E4ED;
+      --af-text-muted:     #9A9AB0;
+      --af-text-heading:   #FFFFFF;
+      --af-gradient:       linear-gradient(135deg, var(--af-primary), var(--af-accent));
+      --af-shadow-glow:    0 0 40px rgba(123, 97, 255, 0.15);
+      --af-radius:         0.75rem;
+      --af-radius-lg:      1rem;
+      --af-transition:     300ms ease;
+    }
+
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    ::selection { background: var(--af-primary); color: #fff; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--af-bg);
+      color: var(--af-text);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--af-text-heading);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    a { transition: color var(--af-transition); color: var(--af-primary-light); }
+    a:hover { color: var(--af-accent); }
+
+    .text-gradient {
+      background: var(--af-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--af-accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 12px;
+      height: 2px;
+      background: var(--af-accent);
+      border-radius: 999px;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: transparent;
+      transition: all var(--af-transition);
+      padding-block: 1rem;
+    }
+
+    .navbar.scrolled {
+      background: rgba(11, 13, 23, 0.88) !important;
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--af-border);
+      padding-block: 0.6rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--af-text-heading) !important;
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-brand__icon {
+      width: 38px;
+      height: 38px;
+      background: var(--af-gradient);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.85rem;
+      color: #fff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: var(--af-text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      position: relative;
+      transition: color var(--af-transition);
+    }
+
+    .navbar-dark .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 1rem;
+      right: 1rem;
+      height: 2px;
+      background: var(--af-gradient);
+      border-radius: 999px;
+      transform: scaleX(0);
+      transition: transform var(--af-transition);
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active { color: var(--af-text-heading); }
+
+    .navbar-dark .navbar-nav .nav-link:hover::after,
+    .navbar-dark .navbar-nav .nav-link.active::after { transform: scaleX(1); }
+
+    .navbar-toggler { border: 1px solid var(--af-glass-border); padding: 0.4rem 0.6rem; }
+    .navbar-toggler:focus { box-shadow: 0 0 0 3px rgba(123, 97, 255, 0.2); }
+    .navbar-toggler-icon { filter: invert(1); }
+    .navbar .offcanvas { background: var(--af-surface); border-left: 1px solid var(--af-border); }
+    .navbar .offcanvas .offcanvas-header { border-bottom: 1px solid var(--af-border); }
+    .navbar .offcanvas .btn-close { filter: invert(1); }
+
+    /* Buttons */
+    .btn-af-primary {
+      background: var(--af-gradient);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: var(--af-shadow-glow);
+      transition: all var(--af-transition);
+    }
+
+    .btn-af-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 60px rgba(123, 97, 255, 0.35);
+      color: #fff;
+    }
+
+    /* Page Header */
+    .page-header {
+      padding-top: 10rem;
+      padding-bottom: 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(123, 97, 255, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(0, 229, 160, 0.06) 0%, transparent 50%);
+      z-index: 0;
+    }
+
+    .page-header__grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+    }
+
+    .page-header__content { position: relative; z-index: 1; }
+
+    .page-header__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--af-text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .page-header__breadcrumb a { color: var(--af-text-muted); }
+    .page-header__breadcrumb a:hover { color: var(--af-primary-light); }
+    .page-header__breadcrumb .sep { opacity: 0.4; }
+
+    .page-header__title {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      animation: fadeInUp 0.6s ease both;
+    }
+
+    .page-header__desc {
+      font-size: 1.1rem;
+      color: var(--af-text-muted);
+      max-width: 600px;
+      line-height: 1.8;
+      animation: fadeInUp 0.6s ease 0.1s both;
+    }
+
+    .page-header__meta {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+      font-size: 0.8rem;
+      color: var(--af-text-muted);
+      animation: fadeInUp 0.6s ease 0.2s both;
+    }
+
+    .page-header__meta i { color: var(--af-accent); margin-right: 0.3rem; }
+
+
+    /* ============================================
+       LEGAL / PRIVACY CONTENT
+       ============================================ */
+    .legal-section {
+      padding-block: 5rem;
+    }
+
+    .legal-card {
+      background: var(--af-surface);
+      border: 1px solid var(--af-border);
+      border-radius: var(--af-radius-lg);
+      padding: 3rem;
+    }
+
+    @media (max-width: 767.98px) {
+      .legal-card { padding: 1.75rem; }
+    }
+
+    /* Table of contents */
+    .toc {
+      background: var(--af-bg);
+      border: 1px solid var(--af-border);
+      border-radius: var(--af-radius);
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .toc__title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--af-text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .toc__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem;
+    }
+
+    @media (max-width: 575.98px) {
+      .toc__list { grid-template-columns: 1fr; }
+    }
+
+    .toc__list li a {
+      font-size: 0.85rem;
+      color: var(--af-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0;
+      transition: all 200ms ease;
+    }
+
+    .toc__list li a:hover {
+      color: var(--af-primary-light);
+      padding-left: 0.3rem;
+    }
+
+    .toc__list li a .num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--af-accent);
+      width: 20px;
+    }
+
+    /* Section headings */
+    .legal-heading {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--af-border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .legal-heading__number {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      background: rgba(123, 97, 255, 0.1);
+      border-radius: 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--af-primary-light);
+    }
+
+    .legal-heading:first-of-type { margin-top: 0; }
+
+    /* Content paragraphs */
+    .legal-card p {
+      font-size: 0.92rem;
+      color: var(--af-text-muted);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .legal-card strong {
+      color: var(--af-text);
+      font-weight: 600;
+    }
+
+    /* Lists */
+    .legal-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.25rem 0;
+    }
+
+    .legal-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--af-text-muted);
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+    }
+
+    .legal-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 7px;
+      height: 7px;
+      background: var(--af-primary);
+      border-radius: 50%;
+    }
+
+    /* Definition items */
+    .def-item {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--af-text-muted);
+      line-height: 1.7;
+    }
+
+    .def-item__label {
+      font-weight: 600;
+      color: var(--af-text);
+      white-space: nowrap;
+      min-width: 120px;
+    }
+
+    /* Rights cards */
+    .right-card {
+      background: var(--af-bg);
+      border: 1px solid var(--af-border);
+      border-radius: var(--af-radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      transition: all var(--af-transition);
+    }
+
+    .right-card:hover {
+      border-color: rgba(123, 97, 255, 0.15);
+      background: var(--af-surface-hover);
+    }
+
+    .right-card__icon {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      background: rgba(123, 97, 255, 0.1);
+      border-radius: 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: var(--af-primary-light);
+    }
+
+    .right-card__title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--af-text-heading);
+      margin-bottom: 1px;
+    }
+
+    .right-card__desc {
+      font-size: 0.8rem;
+      color: var(--af-text-muted);
+      line-height: 1.5;
+    }
+
+    /* Contact box */
+    .contact-box {
+      background: var(--af-bg);
+      border: 1px solid var(--af-border);
+      border-radius: var(--af-radius-lg);
+      padding: 2rem;
+      margin-top: 1rem;
+    }
+
+    .contact-box__row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--af-border);
+    }
+
+    .contact-box__row:last-child { border-bottom: none; }
+
+    .contact-box__icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: rgba(123, 97, 255, 0.1);
+      border-radius: var(--af-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--af-primary-light);
+    }
+
+    .contact-box__label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--af-text-muted);
+    }
+
+    .contact-box__value {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--af-text-heading);
+    }
+
+
+    /* Footer */
+    .footer {
+      background: var(--af-bg-light);
+      border-top: 1px solid var(--af-border);
+      padding-top: 4.5rem;
+    }
+
+    .footer__brand-name {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--af-text-heading);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer__desc { font-size: 0.85rem; color: var(--af-text-muted); line-height: 1.8; max-width: 280px; margin-bottom: 1.25rem; }
+    .footer__social { display: flex; gap: 0.5rem; }
+
+    .footer__social-link {
+      width: 40px; height: 40px; border: 1px solid var(--af-border); border-radius: 0.5rem;
+      display: flex; align-items: center; justify-content: center; color: var(--af-text-muted);
+      font-size: 1rem; transition: all 200ms ease;
+    }
+
+    .footer__social-link:hover { border-color: var(--af-primary); color: var(--af-primary-light); background: rgba(123, 97, 255, 0.08); }
+
+    .footer__title { font-size: 0.8rem; font-weight: 700; color: var(--af-text-heading); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem; }
+
+    .footer__links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer__links li a, .footer__links li span { font-size: 0.85rem; color: var(--af-text-muted); transition: all 200ms ease; }
+    .footer__links li a:hover { color: var(--af-text-heading); padding-left: 4px; }
+
+    .footer__bottom { border-top: 1px solid var(--af-border); padding: 1.25rem 0; margin-top: 3rem; }
+    .footer__copyright { font-size: 0.75rem; color: var(--af-text-muted); }
+    .footer__bottom-link { font-size: 0.75rem; color: var(--af-text-muted); transition: color 200ms ease; }
+    .footer__bottom-link:hover { color: var(--af-text); }
+
+    /* Back to top */
+    .back-to-top {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; width: 44px; height: 44px;
+      background: var(--af-surface); border: 1px solid var(--af-border); border-radius: 0.5rem;
+      display: flex; align-items: center; justify-content: center; color: var(--af-text);
+      font-size: 1.1rem; z-index: 900; opacity: 0; visibility: hidden; transform: translateY(10px);
+      transition: all var(--af-transition); cursor: pointer;
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .back-to-top:hover { background: var(--af-primary); border-color: var(--af-primary); color: #fff; }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ============================================
+       GLOBAL OVERFLOW FIX
+       ============================================ */
+    html, body { overflow-x: hidden; max-width: 100vw; }
+
+    /* ============================================
+       RESPONSIVE — TABLET (≤992px)
+       ============================================ */
+    @media (max-width: 991.98px) {
+      .page-header { padding-top: 8rem; padding-bottom: 3.5rem; }
+      .navbar .btn-af-primary { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
+      .legal-section { padding-block: 4rem; }
+    }
+
+    /* ============================================
+       RESPONSIVE — MOBILE (≤768px)
+       ============================================ */
+    @media (max-width: 767.98px) {
+      .page-header { padding-top: 7rem; padding-bottom: 3rem; }
+      .page-header__title { font-size: 1.85rem; }
+      .page-header__desc { font-size: 0.95rem; }
+      .page-header__meta { flex-direction: column; gap: 0.5rem; }
+      .legal-card { padding: 2rem; }
+      .legal-heading { font-size: 1.15rem; gap: 0.6rem; }
+      .legal-heading__number { width: 32px; height: 32px; min-width: 32px; font-size: 0.75rem; }
+      .legal-card p { font-size: 0.85rem; }
+      .legal-list li { font-size: 0.85rem; }
+      .toc { padding: 1.25rem 1.5rem; }
+      .toc__list { grid-template-columns: 1fr; }
+      .def-item { flex-direction: column; gap: 0.15rem; }
+      .def-item__label { min-width: auto; }
+      .right-card { padding: 0.85rem 1rem; }
+      .right-card__title { font-size: 0.82rem; }
+      .right-card__desc { font-size: 0.75rem; }
+      .contact-box { padding: 1.5rem; }
+      .contact-box__icon { width: 36px; height: 36px; min-width: 36px; }
+      .contact-box__value { font-size: 0.85rem; }
+      .footer { padding-top: 3rem; }
+      .footer__bottom .d-flex { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .section-label { font-size: 0.7rem; }
+      .navbar-brand { font-size: 1.05rem; }
+      .navbar-brand__icon { width: 32px; height: 32px; font-size: 0.75rem; }
+    }
+
+    /* ============================================
+       RESPONSIVE — EXTRA SMALL (≤480px)
+       ============================================ */
+    @media (max-width: 480px) {
+      .page-header { padding-top: 6.5rem; padding-bottom: 2.5rem; }
+      .page-header__title { font-size: 1.6rem; }
+      .legal-card { padding: 1.25rem; }
+      .legal-heading { font-size: 1.05rem; margin-top: 2rem; }
+      .legal-card p { font-size: 0.82rem; line-height: 1.75; }
+      .legal-list li { font-size: 0.82rem; padding-left: 1.25rem; }
+      .toc { padding: 1rem; }
+      .toc__list li a { font-size: 0.78rem; }
+      .right-card { gap: 0.6rem; }
+      .right-card__icon { width: 32px; height: 32px; min-width: 32px; font-size: 0.8rem; }
+      .contact-box { padding: 1.25rem; }
+      .contact-box__row { gap: 0.6rem; }
+      .btn-af-primary { padding: 0.7rem 1.5rem; font-size: 0.85rem; }
+      .footer__brand-name { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span class="navbar-brand__icon">AF</span> AKSHAR FRAMING
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" style="color: var(--af-text-heading); font-weight: 700;">
+            <span class="navbar-brand__icon me-2" style="display:inline-flex;">AF</span> AKSHAR FRAMING
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-af-primary" href="contact.html">Get Free Consultation <i class="bi bi-arrow-right ms-1"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="page-header__bg"><div class="page-header__grid"></div></div>
+    <div class="container page-header__content">
+      <div class="page-header__breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Privacy Policy</span>
+      </div>
+      <h1 class="page-header__title">Privacy <span class="text-gradient">Policy</span></h1>
+      <p class="page-header__desc">Your privacy matters to us. Here's how we collect, use, and protect your data responsibly and transparently.</p>
+      <div class="page-header__meta">
+        <span><i class="bi bi-calendar3"></i> Effective: September 1, 2026</span>
+        <span><i class="bi bi-clock"></i> Last Updated: September 1, 2026</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PRIVACY CONTENT -->
+  <section class="legal-section">
+    <div class="container" style="max-width: 900px;">
+      <div class="legal-card reveal">
+
+        <!-- Table of Contents -->
+        <div class="toc">
+          <div class="toc__title"><i class="bi bi-list-ul me-1"></i> Table of Contents</div>
+          <ol class="toc__list">
+            <li><a href="#section-1"><span class="num">01</span> Introduction</a></li>
+            <li><a href="#section-2"><span class="num">02</span> Data Collection</a></li>
+            <li><a href="#section-3"><span class="num">03</span> Cookies Policy</a></li>
+            <li><a href="#section-4"><span class="num">04</span> Data Usage</a></li>
+            <li><a href="#section-5"><span class="num">05</span> User Rights</a></li>
+            <li><a href="#section-6"><span class="num">06</span> Data Protection</a></li>
+            <li><a href="#section-7"><span class="num">07</span> Third-Party Services</a></li>
+            <li><a href="#section-8"><span class="num">08</span> Updates to Policy</a></li>
+            <li><a href="#section-9"><span class="num">09</span> Contact Information</a></li>
+          </ol>
+        </div>
+
+
+        <!-- 1. Introduction -->
+        <h2 class="legal-heading" id="section-1">
+          <span class="legal-heading__number">01</span> Introduction
+        </h2>
+
+        <p>Protecting the privacy of visitors to our website is of utmost importance to us at <strong>AKSHAR FRAMING</strong>. We are highly dedicated to safeguarding user privacy. The goal of this Privacy Policy is to bring clarity to how we manage the personal information of our website visitors.</p>
+
+        <p>By agreeing to this Privacy Policy, the user accepts the utilization of cookies according to the terms and conditions stated in this policy. This policy outlines how information is collected, circulated, and utilized in connection with the AKSHAR FRAMING website and its affiliates.</p>
+
+        <p>The terms and/or conditions of this Privacy Policy may be changed or modified at any time. Users will be notified about any updates. If a user refuses to accept any changes made to this Privacy Policy, they must immediately stop using the website. Continued use implies consent to the updated terms.</p>
+
+        <p>AKSHAR FRAMING does not hold liability for information collection by any third-party clients, companies, or websites. As our website may include links to other websites, users must be aware that we cannot be held accountable for the privacy policies of those external sites.</p>
+
+
+        <!-- 2. Data Collection -->
+        <h2 class="legal-heading" id="section-2">
+          <span class="legal-heading__number">02</span> Data Collection
+        </h2>
+
+        <p>Through the website, we may collect, store, and use the following types of information:</p>
+
+        <ul class="legal-list">
+          <li>Information provided when registering with our website or filling out contact forms</li>
+          <li>Name, email address, phone number, and any personal information submitted voluntarily</li>
+          <li>Information provided when subscribing to email notifications or newsletters</li>
+          <li>Information about your computer or device including IP address, browser type, operating system, location, referral source, page views, visit duration, and navigation paths</li>
+          <li>Information related to any purchase or transaction made through our website, including name, email, postal address, and payment details</li>
+          <li>Information associated with any communication sent through or to our website including message content and metadata</li>
+          <li>Usage data including frequency, timing, and patterns of service use</li>
+        </ul>
+
+        <p><strong>No Information Collected from Children:</strong> Our website is intended for adults only. We do not knowingly gather or store personal information from users under 18 years of age. Parents are advised to review this policy thoroughly.</p>
+
+
+        <!-- 3. Cookies Policy -->
+        <h2 class="legal-heading" id="section-3">
+          <span class="legal-heading__number">03</span> Cookies Policy
+        </h2>
+
+        <p>AKSHAR FRAMING uses cookies to improve your browsing experience and deliver relevant content. Cookies are small data files created by a web server and stored on your device that help us track usage patterns and recognize return visitors.</p>
+
+        <p>We use the following tracking technologies:</p>
+
+        <div class="def-item">
+          <span class="def-item__label"><i class="bi bi-cookie me-1" style="color: var(--af-accent);"></i> Cookies:</span>
+          <span>Help track online preferences, identify return visitors, and customize your web experience so you don't need to re-enter information on every visit.</span>
+        </div>
+
+        <div class="def-item">
+          <span class="def-item__label"><i class="bi bi-broadcast me-1" style="color: var(--af-accent);"></i> Web Beacons:</span>
+          <span>Programming code used to track individual visits and online behavioral patterns for service improvement and marketing purposes.</span>
+        </div>
+
+        <div class="def-item">
+          <span class="def-item__label"><i class="bi bi-geo-alt me-1" style="color: var(--af-accent);"></i> IP Tracking:</span>
+          <span>Used to identify server issues, manage problems, and collect demographic data.</span>
+        </div>
+
+        <div class="def-item">
+          <span class="def-item__label"><i class="bi bi-file-text me-1" style="color: var(--af-accent);"></i> Log Files:</span>
+          <span>Used to track and monitor member usage patterns across our website.</span>
+        </div>
+
+        <p style="margin-top: 1rem;">Third-party advertising companies may also place cookies on your browser when ads are displayed. You can choose to disable cookies in your browser settings; however, some website features may not function correctly as a result.</p>
+
+
+        <!-- 4. Data Usage -->
+        <h2 class="legal-heading" id="section-4">
+          <span class="legal-heading__number">04</span> Data Usage
+        </h2>
+
+        <p>Personal information received via our website is used only for specific purposes. We may use your information to:</p>
+
+        <ul class="legal-list">
+          <li>Manage the website and our business operations</li>
+          <li>Provide and improve our services to you</li>
+          <li>Send requested services, invoices, statements, and payment reminders</li>
+          <li>Respond to enquiries, complaints, and support requests</li>
+          <li>Send email newsletters or marketing communications that you have specifically requested (you may opt out at any time)</li>
+          <li>Provide anonymized statistical information to third parties (no individual user can be identified)</li>
+          <li>Secure and safeguard the website against fraudulent activities</li>
+          <li>Monitor compliance with our terms and conditions of use</li>
+        </ul>
+
+        <p>No personal information will be published to third-party companies for direct marketing purposes without your explicit consent.</p>
+
+
+        <!-- 5. User Rights -->
+        <h2 class="legal-heading" id="section-5">
+          <span class="legal-heading__number">05</span> User Rights
+        </h2>
+
+        <p>As a user of our website, you have the following rights regarding your personal information:</p>
+
+        <div class="right-card">
+          <div class="right-card__icon"><i class="bi bi-eye"></i></div>
+          <div>
+            <div class="right-card__title">Access</div>
+            <div class="right-card__desc">You may request a copy of the personal data we hold about you.</div>
+          </div>
+        </div>
+
+        <div class="right-card">
+          <div class="right-card__icon"><i class="bi bi-pencil-square"></i></div>
+          <div>
+            <div class="right-card__title">Update</div>
+            <div class="right-card__desc">You may request correction of inaccurate or incomplete personal information.</div>
+          </div>
+        </div>
+
+        <div class="right-card">
+          <div class="right-card__icon"><i class="bi bi-trash3"></i></div>
+          <div>
+            <div class="right-card__title">Delete</div>
+            <div class="right-card__desc">You may request deletion of your personal data, subject to legal obligations.</div>
+          </div>
+        </div>
+
+        <div class="right-card">
+          <div class="right-card__icon"><i class="bi bi-bell-slash"></i></div>
+          <div>
+            <div class="right-card__title">Opt-Out</div>
+            <div class="right-card__desc">You may unsubscribe from marketing emails at any time using the unsubscribe link or by contacting us directly.</div>
+          </div>
+        </div>
+
+        <div class="right-card">
+          <div class="right-card__icon"><i class="bi bi-box-arrow-up-right"></i></div>
+          <div>
+            <div class="right-card__title">Data Portability</div>
+            <div class="right-card__desc">You may request that your data be provided in a portable format.</div>
+          </div>
+        </div>
+
+        <div class="right-card">
+          <div class="right-card__icon"><i class="bi bi-shield-exclamation"></i></div>
+          <div>
+            <div class="right-card__title">Restrict Processing</div>
+            <div class="right-card__desc">You may object to or request restriction of how we process your data.</div>
+          </div>
+        </div>
+
+        <p style="margin-top: 1rem;">To exercise any of these rights, contact us at <a href="mailto:aksharframing577@gmail.com">aksharframing577@gmail.com</a>.</p>
+
+
+        <!-- 6. Data Protection -->
+        <h2 class="legal-heading" id="section-6">
+          <span class="legal-heading__number">06</span> Data Protection & Security
+        </h2>
+
+        <p>AKSHAR FRAMING uses industry-standard guidelines and security measures to protect and safeguard individual data. We implement appropriate technical and organizational measures to prevent misuse, unauthorized alteration, or loss of data.</p>
+
+        <p>However, users are informed that no storage technique or method of transmitting information over the Internet is completely secure. While we make every effort to protect our users' personal information, we cannot guarantee absolute security. We also do not provide a guarantee that our security measures will stop third-party hackers from unlawfully accessing personal information.</p>
+
+
+        <!-- 7. Third-Party Services -->
+        <h2 class="legal-heading" id="section-7">
+          <span class="legal-heading__number">07</span> Third-Party Services
+        </h2>
+
+        <p>We may use trusted third-party services for website analytics, advertising, and communication. These may include:</p>
+
+        <ul class="legal-list">
+          <li><strong>Google Analytics</strong> for tracking website usage and performance</li>
+          <li><strong>Third-party advertising networks</strong> for displaying relevant advertisements</li>
+          <li><strong>Payment service providers</strong> for processing financial transactions securely</li>
+          <li><strong>Email service providers</strong> for sending newsletters and notifications</li>
+        </ul>
+
+        <p>Each of these third-party services operates under their own privacy policies. AKSHAR FRAMING is not responsible for their data practices. We recommend reviewing the privacy policies of any third-party services you interact with through our website.</p>
+
+        <p>We may also release user personal information to members of our group of companies, professional advisers, subcontractors, or suppliers, strictly as required for the purposes outlined in this policy or as required by law.</p>
+
+
+        <!-- 8. Updates to Policy -->
+        <h2 class="legal-heading" id="section-8">
+          <span class="legal-heading__number">08</span> Updates to This Policy
+        </h2>
+
+        <p>We reserve the right to alter or modify any provision of this Privacy Policy at any time. Users are encouraged to regularly check this page for any updates.</p>
+
+        <p>In the event of any material changes, users will be notified via their registered email address or through a prominent notice on the website. Continued use of the website after changes are made reflects the user's acknowledgement and consent to the updated terms.</p>
+
+        <p>Unless further changes are made, this policy remains in effect as per the effective date stated above.</p>
+
+
+        <!-- 9. Contact -->
+        <h2 class="legal-heading" id="section-9">
+          <span class="legal-heading__number">09</span> Contact Information
+        </h2>
+
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, please contact us:</p>
+
+        <div class="contact-box">
+          <div class="contact-box__row">
+            <div class="contact-box__icon"><i class="bi bi-building"></i></div>
+            <div>
+              <div class="contact-box__label">Company</div>
+              <div class="contact-box__value">AKSHAR FRAMING</div>
+            </div>
+          </div>
+          <div class="contact-box__row">
+            <div class="contact-box__icon"><i class="bi bi-telephone"></i></div>
+            <div>
+              <div class="contact-box__label">Phone / WhatsApp</div>
+              <div class="contact-box__value"><a href="tel:+919909517713" style="color: var(--af-text-heading);">+91 99095 17713</a></div>
+            </div>
+          </div>
+          <div class="contact-box__row">
+            <div class="contact-box__icon"><i class="bi bi-envelope"></i></div>
+            <div>
+              <div class="contact-box__label">Email</div>
+              <div class="contact-box__value"><a href="mailto:aksharframing577@gmail.com" style="color: var(--af-text-heading);">aksharframing577@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="contact-box__row">
+            <div class="contact-box__icon"><i class="bi bi-geo-alt"></i></div>
+            <div>
+              <div class="contact-box__label">Address</div>
+              <div class="contact-box__value">730, Shakti Vijay Society, Nana Varachha,<br>Surat, Gujarat — 395006</div>
+            </div>
+          </div>
+          <div class="contact-box__row">
+            <div class="contact-box__icon"><i class="bi bi-clock"></i></div>
+            <div>
+              <div class="contact-box__label">Working Hours</div>
+              <div class="contact-box__value">Mon – Sat, 10:00 AM – 7:00 PM IST</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer__brand-name">
+            <span class="navbar-brand__icon" style="width:32px;height:32px;font-size:0.75rem;">AF</span> AKSHAR FRAMING
+          </div>
+          <p class="footer__desc">Framing Ideas. Building Technology. Trusted by businesses across India to deliver technology that performs.</p>
+
+
+        </div>
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer__title">Company</h5>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer__title">Services</h5>
+          <ul class="footer__links">
+            <li><a href="services.html">Web Development</a></li>
+            <li><a href="services.html">App Development</a></li>
+            <li><a href="services.html">AI Solutions</a></li>
+            <li><a href="services.html">UI/UX Design</a></li>
+            <li><a href="services.html">Google Ads</a></li>
+            <li><a href="services.html">Meta Ads</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer__title">Office</h5>
+          <ul class="footer__links">
+            <li><span><i class="bi bi-geo-alt me-2" style="color: var(--af-primary-light);"></i>730, Shakti Vijay Society</span></li>
+            <li><span style="padding-left: 1.4rem;">Nana Varachha</span></li>
+            <li><span style="padding-left: 1.4rem;">Surat, Gujarat 395006</span></li>
+            <li style="margin-top: 0.5rem;"><span><i class="bi bi-telephone me-2" style="color: var(--af-primary-light);"></i>+91 99095 17713</span></li>
+            <li><span><i class="bi bi-envelope me-2" style="color: var(--af-primary-light);"></i>aksharframing577@gmail.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <p class="footer__copyright mb-0">© 2026 AKSHAR FRAMING. All rights reserved.</p>
+          <div class="d-flex gap-3">
+            <a href="privacy.html" class="footer__bottom-link">Privacy Policy</a>
+            <a href="#" class="footer__bottom-link">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navbar = document.getElementById('mainNav');
+      const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 60);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      const oc = document.getElementById('navbarOffcanvas');
+      const bsOC = oc ? bootstrap.Offcanvas.getOrCreateInstance(oc) : null;
+      document.querySelectorAll('#navbarOffcanvas .nav-link').forEach(l => {
+        l.addEventListener('click', () => { if (bsOC && window.innerWidth < 992) bsOC.hide(); });
+      });
+
+      const revealEls = document.querySelectorAll('.reveal');
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => obs.observe(el));
+
+      const btn = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400), { passive: true });
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    });
+  </script>
+
+</body>
+</html>
